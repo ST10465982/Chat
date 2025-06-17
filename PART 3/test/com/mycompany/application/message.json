@@ -1,0 +1,27 @@
+[
+  {
+    "sender": "Zara",
+    "receiver": "Kai",
+    "content": "You left your hoodie at my place again."
+  },
+  {
+    "sender": "Kai",
+    "receiver": "Zara",
+    "content": "Maybe I did it on purpose so I’d have an excuse to come back."
+  },
+  {
+    "sender": "Zara",
+    "receiver": "Kai",
+    "content": "Smooth. But you still owe me coffee for yesterday."
+  },
+  {
+    "sender": "Kai",
+    "receiver": "Zara",
+    "content": "Deal. I’ll even let you pick the place this time."
+  },
+  {
+    "sender": "Zara",
+    "receiver": "Kai",
+    "content": "I’ll believe it when I see it 😄"
+  }
+]
