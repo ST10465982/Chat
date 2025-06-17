@@ -1,0 +1,32 @@
+name: Java CI (No Maven)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile Java files
+        run: javac -d out $(find . -name "*.java")
+
+      - name: Run JUnit tests
+        run: |
+          mkdir -p test-results
+          java -cp ".:out:$(find . -name '*.jar' | tr '\n' ':')" org.junit.platform.console.ConsoleLauncher \
+            --scan-class-path out \
+            --details verbose \
+            --reports-dir test-results
